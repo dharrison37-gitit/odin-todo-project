@@ -72,7 +72,17 @@ footer {
   grid-area: footer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
+  .container {
+    gap: 15px;
+    grid-template-areas:
+      "header nav"
+      "aside main"
+      "footer footer";
+  }
+}
+
+@media (min-width: 70em) {
   .container {
     gap: 25px;
     grid-template-areas:
