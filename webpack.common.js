@@ -13,8 +13,10 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      templateParameters: {
+        title: "Done",
+      },
       filename: "index.html",
-      title: "Get It Done",
       inject: true,
     }),
   ],
