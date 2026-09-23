@@ -9,14 +9,12 @@ export default {
     filename: "index.js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
-    html: {
-      title: "Production",
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
       filename: "index.html",
+      title: "Get It Done",
       inject: true,
     }),
   ],
