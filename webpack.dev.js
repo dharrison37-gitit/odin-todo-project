@@ -1,37 +1,31 @@
 import { merge } from "webpack-merge";
 import common from "./webpack.common.js";
-import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default merge(common, {
-    mode: "development",
-    devtool: "eval-source-map",
-    devServer: {
-        static: "./dist",
-        open: {
-            app: {
-                name: "google-chrome",
-            },
-        },
+  mode: "development",
+  devtool: "eval-source-map",
+  devServer: {
+    static: "./dist",
+    open: {
+      app: {
+        name: "google-chrome",
+      },
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/template.html",
-        }),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)/i,
+        use: "asset/resource",
+      },
     ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
-            {
-                test: /\.html$/i,
-                use: ["html-loader"],
-            },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)/i,
-                use: "asset/resource",
-            },
-        ],
-    },
+  },
 });
