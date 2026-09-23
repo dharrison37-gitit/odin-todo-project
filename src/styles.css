@@ -45,34 +45,30 @@ aside,
 main,
 footer {
   padding: 20px;
+  border: 1px solid black;
 }
 
 header {
-  background-color: lightblue;
   grid-area: header;
 }
 
 nav {
-  background-color: lightsalmon;
   grid-area: nav;
 }
 
 aside {
-  background-color: lightcoral;
   grid-area: aside;
 }
 
 main {
-  background-color: lightcyan;
   grid-area: main;
 }
 
 footer {
-  background-color: lightgreen;
   grid-area: footer;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 30em) {
   .container {
     gap: 15px;
     grid-template-areas:
