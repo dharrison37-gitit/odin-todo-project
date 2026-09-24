@@ -24,7 +24,7 @@ const createTodo = (title, description, dueDate, priority, notes) => {
     if (obj.description) _description = obj.description;
     if (obj.dueDate) _dueDate = obj.dueDate;
     if (obj.priority) _priority = obj.priority;
-    if (obj.snotes) _notes = obj.notes;
+    if (obj.notes) _notes = obj.notes;
   };
 
   const updateCompleted = () => {
