@@ -17,6 +17,8 @@ const createTodo = (title, description, dueDate, priority, notes) => {
     completed: _isComplete,
   });
 
+  const getID = () => _id;
+
   const updateTodo = (obj) => {
     if (obj.title) _title = obj.title;
     if (obj.description) _description = obj.description;
@@ -30,7 +32,7 @@ const createTodo = (title, description, dueDate, priority, notes) => {
     return _isComplete;
   };
 
-  return { getTodo, updateTodo, updateCompleted };
+  return { getTodo, updateTodo, updateCompleted, getID };
 };
 
 export default createTodo;
