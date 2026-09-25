@@ -1,7 +1,13 @@
-.grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 8px;
-  justify-items: start;
+.grid-header {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

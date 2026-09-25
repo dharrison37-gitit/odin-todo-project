@@ -29,14 +29,13 @@ body {
 .container {
   height: 100vh;
   padding: 2px;
-  margin: 0 auto;
   display: grid;
-  gap: 5px;
+  gap: 2px;
   grid-template-areas:
     "header"
     "new"
-    "projects"
-    "todos"
+    "proj"
+    "todo"
     "footer";
 }
 
@@ -45,7 +44,7 @@ footer,
 #new,
 #projects,
 #todos {
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid black;
 }
 
@@ -58,11 +57,11 @@ header {
 }
 
 #projects {
-  grid-area: projects;
+  grid-area: proj;
 }
 
 #todos {
-  grid-area: todos;
+  grid-area: todo;
 }
 
 footer {
@@ -76,13 +75,11 @@ footer {
 
   input[type="text"] {
     line-height: 1.5;
+    font-size: 1.2rem;
     border: none;
     width: 90%;
     padding: 8px;
     margin: 10px;
-  }
-
-  button {
   }
 }
 
@@ -94,32 +91,31 @@ footer {
 }
 
 .btn {
+  max-width: 200px;
   background-color: dodgerblue;
   color: white;
   padding: 0.5rem 1.5rem;
   margin: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 777;
   border: none;
   border-radius: 10px;
 }
 
-@media (min-width: 30em) {
-  .container {
-    gap: 15px;
-    grid-template-areas:
-      "header new"
-      "projects todos"
-      "footer footer";
-  }
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 5px;
 }
 
-@media (min-width: 70em) {
+@media (min-width: 48em) {
   .container {
-    gap: 25px;
+    gap: 10px;
     grid-template-areas:
-      "header header new"
-      "projects todos todos"
-      "footer footer footer";
+      "header header new new"
+      "proj todo todo todo"
+      "footer footer footer footer";
+    grid-template-rows: 1fr 3fr 1fr;
   }
 }

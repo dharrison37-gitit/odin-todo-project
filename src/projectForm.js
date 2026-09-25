@@ -13,13 +13,13 @@ const projectForm = () => {
     const projectName = formData.get("name");
 
     if (!projectName) return;
-
     const projects = document.querySelector("#projects");
+    const projectGrid = document.querySelector(".project-grid");
 
     const project = createProject(projectName);
 
     const projectContainer = document.createElement("div");
-    projectContainer.classList.add("grid");
+    projectContainer.classList.add("grid-item");
     projectContainer.textContent = project.getName();
 
     const addBtn = document.createElement("button");
@@ -27,7 +27,9 @@ const projectForm = () => {
     addBtn.textContent = "+";
     projectContainer.appendChild(addBtn);
 
-    projects.appendChild(projectContainer);
+    projectGrid.appendChild(projectContainer);
+
+    projects.appendChild(projectGrid);
 
     form.reset();
     dialog.close();

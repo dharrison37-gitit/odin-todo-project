@@ -2,10 +2,13 @@ import projectForm from "./projectForm.js";
 import "./styles.css";
 
 const projectUI = () => {
-  const sectionNew = document.querySelector("#new");
+  const projectSection = document.querySelector("#projects");
+
+  const headerDiv = document.createElement("div");
+  headerDiv.classList.add("grid-header");
 
   const header = document.createElement("h3");
-  header.textContent = "Create new project";
+  header.textContent = "Projects";
 
   const dialog = document.querySelector("#project-dialog");
   dialog.classList.add("dialog");
@@ -18,8 +21,10 @@ const projectUI = () => {
     dialog.showModal();
   });
 
-  sectionNew.appendChild(header);
-  sectionNew.appendChild(newBtn);
+  headerDiv.appendChild(header);
+  headerDiv.appendChild(newBtn);
+
+  projectSection.appendChild(headerDiv);
 
   projectForm();
 };
