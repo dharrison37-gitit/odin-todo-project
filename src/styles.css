@@ -93,6 +93,52 @@ footer {
   align-items: center;
   gap: 5px;
 }
+.dialog {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 20% auto;
+}
+
+#project-form {
+  width: 400px;
+  display: grid;
+  grid-template-areas:
+    "input input input input"
+    ". . button1 button2";
+  justify-items: center;
+
+  input[type="text"] {
+    grid-area: input;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    border: none;
+    width: 90%;
+    padding: 8px;
+    margin: 10px;
+  }
+
+  #add-btn {
+    grid-area: button1;
+  }
+
+  #cancel {
+    grid-area: button2;
+  }
+}
+
+.grid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 @media (min-width: 48em) {
   .container {
