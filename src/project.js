@@ -1,14 +1,17 @@
 const createProject = (name) => {
+  let _id = crypto.randomUUID();
   let _name = name;
   let _todos = [];
 
+  const getID = () => _id;
+
   const getName = () => _name;
 
-  const getProjectItems = () => _todos;
+  const getTodos = () => _todos;
 
-  const addProjectItem = (obj) => _todos.push(obj);
+  const addTodo = (obj) => _todos.push(obj);
 
-  const updateProjectItem = (obj) => {
+  const updateItem = (obj) => {
     for (let todo of _todos) {
       let idx = _todos.indexOf(todo);
       console.log(idx);
@@ -18,11 +21,11 @@ const createProject = (name) => {
     }
   };
 
-  const removeProjectItem = (obj) => {
+  const removeItem = (obj) => {
     _todos = _todos.filter((todo) => todo.id !== obj.getID());
   };
 
-  return { getName, getProjectItems, addProjectItem, updateProjectItem, removeProjectItem };
+  return { getID, getName, getTodos, addTodo, updateItem, removeItem };
 };
 
 export default createProject;

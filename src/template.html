@@ -16,15 +16,40 @@
         <header>
             <h1>Todo Logo</h1>
         </header>
-        <nav>Nav Content</nav>
 
-        <main>
-            Main Content
-        </main>
+        <section id="new">
+            <dialog id="project-dialog">
+                <form id="project-form">
+                    <input type="text" name="name" id="name" placeholder="Project name">
+                    <button id="add-btn">Add</button>
+                    <button id="cancel">Cancel</button>
+                </form>
+            </dialog>
+        </section>
 
-        <aside>
-            Aside Content
-        </aside>
+        <section id="todos">
+            <h3>Todos</h3>
+            <dialog id="todo-dialog">
+                <form id="todo-form">
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="description" id="description" placeholder="Description">
+                    <input type="date" name="due-date" id="due-date" placeholder="Due Date">
+                    <select name="priority" id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <textarea name="notes" id="notes" cols="20" rows="5" placeholder="Todo Notes"></textarea>
+                    <input type="checkbox" name="completed" id="completed">
+                    <button id="add-todo" class="btn">Add</button>
+                    <button id="cancel-todo" class="btn">Cancel</button>
+                </form>
+            </dialog>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+        </section>
 
         <footer>
             Footer Content

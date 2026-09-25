@@ -23,6 +23,7 @@
 
 body {
   height: 100vh;
+  background-color: honeydew;
 }
 
 .container {
@@ -33,17 +34,17 @@ body {
   gap: 5px;
   grid-template-areas:
     "header"
-    "nav"
-    "aside"
-    "main"
+    "new"
+    "projects"
+    "todos"
     "footer";
 }
 
 header,
-nav,
-aside,
-main,
-footer {
+footer,
+#new,
+#projects,
+#todos {
   padding: 20px;
   border: 1px solid black;
 }
@@ -52,28 +53,63 @@ header {
   grid-area: header;
 }
 
-nav {
-  grid-area: nav;
+#new {
+  grid-area: new;
 }
 
-aside {
-  grid-area: aside;
+#projects {
+  grid-area: projects;
 }
 
-main {
-  grid-area: main;
+#todos {
+  grid-area: todos;
 }
 
 footer {
   grid-area: footer;
 }
 
+.dialog {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 20% auto;
+
+  input[type="text"] {
+    line-height: 1.5;
+    border: none;
+    width: 90%;
+    padding: 8px;
+    margin: 10px;
+  }
+
+  button {
+  }
+}
+
+.todo {
+  background-color: lightcyan;
+  border: 1px solid teal;
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 777;
+  border: none;
+  border-radius: 10px;
+}
+
 @media (min-width: 30em) {
   .container {
     gap: 15px;
     grid-template-areas:
-      "header nav"
-      "aside main"
+      "header new"
+      "projects todos"
       "footer footer";
   }
 }
@@ -82,8 +118,8 @@ footer {
   .container {
     gap: 25px;
     grid-template-areas:
-      "header header nav"
-      "aside main main"
+      "header header new"
+      "projects todos todos"
       "footer footer footer";
   }
 }

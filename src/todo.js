@@ -27,12 +27,13 @@ const createTodo = (title, description, dueDate, priority, notes) => {
     if (obj.notes) _notes = obj.notes;
   };
 
-  const updateCompleted = () => {
+  const updateStatus = () => {
     _isComplete = !_isComplete;
-    return _isComplete;
   };
 
-  return { getTodo, updateTodo, updateCompleted, getID };
+  const getStatus = () => _isComplete;
+
+  return { getTodo, updateTodo, updateStatus, getStatus, getID };
 };
 
 export default createTodo;
