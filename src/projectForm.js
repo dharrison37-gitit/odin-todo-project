@@ -13,6 +13,7 @@ const projectForm = () => {
     const projectName = formData.get("name");
 
     if (!projectName) return;
+
     const projects = document.querySelector("#projects");
     const projectGrid = document.querySelector(".project-grid");
 

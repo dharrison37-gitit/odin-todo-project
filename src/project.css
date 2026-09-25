@@ -1,3 +1,12 @@
+#project-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  input[type="text"] {
+    grid-column: 1 / span 4;
+  }
+}
+
 .grid-header {
   display: flex;
   align-items: center;
