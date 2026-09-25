@@ -1,9 +1,22 @@
+.dialog {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 20% auto;
+}
+
 #project-form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 
   input[type="text"] {
-    grid-column: 1 / span 4;
+    grid-column: 1 / 4;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    border: none;
+    width: 90%;
+    padding: 8px;
+    margin: 10px;
   }
 }
 

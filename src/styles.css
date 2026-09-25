@@ -68,21 +68,6 @@ footer {
   grid-area: footer;
 }
 
-.dialog {
-  background-color: lightgray;
-  padding: 10px;
-  margin: 20% auto;
-
-  input[type="text"] {
-    line-height: 1.5;
-    font-size: 1.2rem;
-    border: none;
-    width: 90%;
-    padding: 8px;
-    margin: 10px;
-  }
-}
-
 .todo {
   background-color: lightcyan;
   border: 1px solid teal;
