@@ -109,10 +109,10 @@ footer {
 
   input[type="text"] {
     grid-area: input;
-    line-height: 1.5;
-    font-size: 1.2rem;
+    line-height: 1.5 !important;
+    font-size: 1.2rem !important;
     border: none;
-    width: 90%;
+    width: 90% !important;
     padding: 8px;
     margin: 10px;
   }
