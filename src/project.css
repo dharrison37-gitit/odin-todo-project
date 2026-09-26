@@ -14,15 +14,6 @@
   margin: auto;
   padding: 1em;
 
-  input[type="text"] {
-    grid-column: 1 / span 4;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    border: none;
-    padding: 0.5em;
-    margin-bottom: 1em;
-  }
-
   #add-btn {
     grid-column: 3;
     grid-row: 2;
@@ -32,6 +23,15 @@
     grid-column: 4;
     grid-row: 2;
   }
+}
+
+#project-form input {
+  grid-column: 1 / span 4;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.5em;
+  margin-bottom: 1em;
 }
 
 .grid-header {
