@@ -1,3 +1,4 @@
+import "./project.css";
 import createProject from "./project.js";
 
 const projectForm = () => {

@@ -1,16 +1,22 @@
 .dialog {
-  background-color: lightgreen;
-  padding: 10px;
+  background-color: lightslategray;
+  max-width: 550px;
+  width: 90%;
+
+  padding: 1em;
   margin: 20% auto;
 }
 
 #project-form {
-  width: 400px;
+  max-width: 350px;
+  width: 95%;
   display: grid;
   grid-template-areas:
     "input input input input"
     ". . button1 button2";
   justify-items: center;
+  align-items: center;
+  margin: auto;
 
   input[type="text"] {
     grid-area: input;

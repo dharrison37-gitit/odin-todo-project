@@ -13,9 +13,6 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      templateParameters: {
-        title: "Done n Done",
-      },
       filename: "index.html",
       inject: true,
     }),

@@ -93,52 +93,6 @@ footer {
   align-items: center;
   gap: 5px;
 }
-.dialog {
-  background-color: lightslategray;
-  padding: 10px;
-  margin: 20% auto;
-}
-
-#project-form {
-  width: 400px;
-  display: grid;
-  grid-template-areas:
-    "inp inp inp inp"
-    ". . btn1 btn2";
-  justify-items: center;
-
-  .dialog-input {
-    grid-area: inp;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    border: none;
-    width: 375px;
-    padding: 8px;
-    margin: 10px;
-  }
-
-  #add-btn {
-    grid-area: btn1;
-  }
-
-  #cancel {
-    grid-area: btn2;
-  }
-}
-
-.grid-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.grid-item {
-  background-color: lightblue;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 @media (min-width: 48em) {
   .container {
